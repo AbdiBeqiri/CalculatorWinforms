@@ -13,9 +13,9 @@ namespace CalculatorWinforms
     public partial class Form1 : Form
     {
         private bool operatorClicked = false;
-        private int firstNumber;
-        private int secondNumber;
-        private int result;
+        private decimal firstNumber;
+        private decimal secondNumber;
+        private decimal result;
         string _operator = string.Empty;
         string _valueOfButtonClicked = string.Empty;
         public Form1()
@@ -85,8 +85,8 @@ namespace CalculatorWinforms
                 return;
             else
             {
-                firstNumber = int.Parse(txtFirstOperand.Text);
-                secondNumber = int.Parse(txtSecondOperand.Text);
+                firstNumber = decimal.Parse(txtFirstOperand.Text);
+                secondNumber = decimal.Parse(txtSecondOperand.Text);
             }
             _operator = txtOperator.Text;
 
@@ -127,6 +127,72 @@ namespace CalculatorWinforms
                         txtSecondOperand.Text += btnClicked.Text;
                     break;
             }
+        }
+
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            
+            if (e.KeyCode == Keys.NumPad0)
+            {
+                btn0.PerformClick();
+            }
+            if (e.KeyCode == Keys.NumPad1)
+            {
+                btn1.PerformClick();
+            }
+            if (e.KeyCode == Keys.NumPad2)
+            {
+                btn2.PerformClick();
+            }
+            if (e.KeyCode == Keys.NumPad3)
+            {
+                btn3.PerformClick();
+            }
+            if (e.KeyCode == Keys.NumPad4)
+            {
+                btn4.PerformClick();
+            }
+            if (e.KeyCode == Keys.NumPad5)
+            {
+                btn5.PerformClick();
+            }
+            if (e.KeyCode == Keys.NumPad6)
+            {
+                btn6.PerformClick();
+            }
+            if (e.KeyCode == Keys.NumPad7)
+            {
+                btn7.PerformClick();
+            }
+            if (e.KeyCode == Keys.NumPad8)
+            {
+                btn8.PerformClick();
+            }
+            if (e.KeyCode == Keys.NumPad9)
+            {
+                btn9.PerformClick();
+            }
+            if (e.KeyCode == Keys.Multiply)
+            {
+                btnMultiply.PerformClick();
+            }
+            if (e.KeyCode == Keys.Divide)
+            {
+                btnDivide.PerformClick();
+            }
+            if (e.KeyCode == Keys.Add)
+            {
+                btnPlus.PerformClick();
+            }
+            if (e.KeyCode == Keys.Subtract)
+            {
+                btnMinus.PerformClick();
+            }
+            if (e.KeyCode == Keys.Return)
+            {
+                btnEquals.PerformClick();
+            }
+
         }
     }
 }

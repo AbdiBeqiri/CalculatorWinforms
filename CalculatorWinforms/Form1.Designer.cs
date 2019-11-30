@@ -268,8 +268,9 @@
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(100, 100);
             this.button18.TabIndex = 21;
-            this.button18.Text = ",";
+            this.button18.Text = ".";
             this.button18.UseVisualStyleBackColor = true;
+            this.button18.Click += new System.EventHandler(this.OnButtonClicked);
             // 
             // Form1
             // 
@@ -298,8 +299,10 @@
             this.Controls.Add(this.btn2);
             this.Controls.Add(this.btn1);
             this.Controls.Add(this.btn0);
+            this.KeyPreview = true;
             this.Name = "Form1";
             this.Text = "Form1";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
